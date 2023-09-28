@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eff6f8;
+}
+
+.slider {
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    transition: opacity 1s;
+    opacity: 0;
+    border: 2px solid rgba(rgb(124, 12, 12), rgb(13, 53, 13), rgb(13, 13, 80), alpha) !important;
+    border-radius: 20px;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
